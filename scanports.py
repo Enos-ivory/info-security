@@ -3,7 +3,7 @@ import nmap
 
 scanner = nmap.PortScanner()
 
-scanner.scan('', '21-80')
+scanner.scan('8.8.8.8', '21-80') # set ip adrres / ports
 
 for host in scanner.all_hosts():
     print('host : %s' % (scanner[host].hostname()))
